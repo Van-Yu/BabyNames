@@ -4,13 +4,13 @@
  * 
  * Source: https://www.ssa.gov/oact/babynames/limits.html
  * 
- * Records are provided as NameData objects associating a given name
- * with the gender of the individual and the number of babies assigned
+ * Records are provided as NameData objects that associate a given name
+ * with the gender of the baby and the total number of babies assigned
  * that name during a particular year.
  * 
  * K Collins, Spring 2018
 
- */ 
+ */
 package org.asl.namebank;
 
 import java.io.File;
@@ -29,18 +29,21 @@ public class NameBank {
 	static {
 		initializeNameData();
 	}
-
-	public static void main(String[] args) {
-		NameData[] names = getArrayForYear("1964");
-		for (NameData nd:names) {
-			System.out.println(nd);
-		}
+	
+	public static List<String> getListOfYears() {
+		return new ArrayList<String>(namesByYear.keySet());
+	}
+	
+	public static String[] getArrayOfYears() {
+		List<String> stringList = getListOfYears();
+		int numEntries = stringList.size();
+		return stringList.toArray(new String[numEntries]);
 	}
 
 	public static List<NameData> getListForYear(String year) {
 		return namesByYear.get(year);
 	}
-	
+
 	public static NameData[] getArrayForYear(String year) {
 		List<NameData> data = getListForYear(year);
 		int numEntries = data.size();
@@ -63,12 +66,13 @@ public class NameBank {
 				List<String> lines = Files
 						.readAllLines(Paths.get(f.getPath()));
 				List<NameData> yearlyTallies = new ArrayList<NameData>();
-				for (String line: lines) {
+				for (String line : lines) {
 					String[] data = line.split(",");
 					String name = data[0];
 					String gender = data[1];
 					int number = Integer.parseInt(data[2]);
-					yearlyTallies.add(new NameData(year, name, gender, number));
+					yearlyTallies.add(new NameData(year, name,
+							gender, number));
 				}
 				namesByYear.put(year, yearlyTallies);
 			}
