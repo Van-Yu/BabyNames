@@ -3,7 +3,8 @@ package org.asl.namebank;
 public class NameExplorer {
 
 	/**
-	 * Find the most popular name for the year for the gender.
+	 * Task 1.
+	 * Find the most popular name for a year according to gender.
 	 * 
 	 * @param year
 	 * @param gender
