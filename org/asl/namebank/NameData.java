@@ -5,10 +5,10 @@ public class NameData {
 	private String year;
 	private String givenName;
 	private String gender;
-	private String number;
+	private int number;
 
 	public NameData(String year, String name, String gender,
-			String number) {
+			int number) {
 		this.year = year;
 		this.givenName = name;
 		this.gender = gender;
@@ -27,7 +27,7 @@ public class NameData {
 		return gender;
 	}
 
-	public String getNumber() {
+	public int getNumber() {
 		return number;
 	}
 	@Override
