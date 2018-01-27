@@ -6,7 +6,7 @@
  * 
  * Records are provided as NameData objects associating a given name
  * with the gender of the individual and the number of babies assigned
- * that name during the particular year.
+ * that name during a particular year.
  * 
  * K Collins, Spring 2018
 
@@ -24,31 +24,31 @@ import java.util.List;
 
 public class NameBank {
 
-	private static HashMap<Integer, List<NameData>> namesByYear;
+	private static HashMap<String, List<NameData>> namesByYear;
 
 	static {
 		initializeNameData();
 	}
 
 	public static void main(String[] args) {
-		NameData[] names = getArrayForYear(1964);
+		NameData[] names = getArrayForYear("2015");
 		for (NameData nd:names) {
-			System.out.println(nd.getName());
+			System.out.println(nd);
 		}
 	}
 
-	public static List<NameData> getListForYear(int year) {
+	public static List<NameData> getListForYear(String year) {
 		return namesByYear.get(year);
 	}
 	
-	public static NameData[] getArrayForYear(int year) {
+	public static NameData[] getArrayForYear(String year) {
 		List<NameData> data = getListForYear(year);
 		int numEntries = data.size();
 		return data.toArray(new NameData[numEntries]);
 	}
 
 	private static void initializeNameData() {
-		namesByYear = new HashMap<Integer, List<NameData>>();
+		namesByYear = new HashMap<String, List<NameData>>();
 		File directory = new File(
 				NameBank.class.getResource("/names/").getFile());
 		File[] files = directory.listFiles(new FilenameFilter() {
@@ -65,12 +65,10 @@ public class NameBank {
 				List<NameData> yearlyTallies = new ArrayList<NameData>();
 				for (String line: lines) {
 					String[] data = line.split(",");
-					yearlyTallies.add(new NameData(data[0], data[1], data[2]));
+					yearlyTallies.add(new NameData(year, data[0], data[1], data[2]));
 				}
-				namesByYear.put(Integer.parseInt(year), yearlyTallies);
+				namesByYear.put(year, yearlyTallies);
 			}
-			System.out.println(namesByYear.keySet());
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
