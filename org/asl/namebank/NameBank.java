@@ -31,7 +31,7 @@ public class NameBank {
 	}
 
 	public static void main(String[] args) {
-		NameData[] names = getArrayForYear("2015");
+		NameData[] names = getArrayForYear("1964");
 		for (NameData nd:names) {
 			System.out.println(nd);
 		}
