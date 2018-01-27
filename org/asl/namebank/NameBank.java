@@ -65,7 +65,10 @@ public class NameBank {
 				List<NameData> yearlyTallies = new ArrayList<NameData>();
 				for (String line: lines) {
 					String[] data = line.split(",");
-					yearlyTallies.add(new NameData(year, data[0], data[1], data[2]));
+					String name = data[0];
+					String gender = data[1];
+					int number = Integer.parseInt(data[2]);
+					yearlyTallies.add(new NameData(year, name, gender, number));
 				}
 				namesByYear.put(year, yearlyTallies);
 			}
