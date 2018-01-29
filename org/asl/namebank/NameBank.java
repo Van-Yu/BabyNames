@@ -30,20 +30,42 @@ public class NameBank {
 		initializeNameData();
 	}
 	
+	/**
+	 * Retrieves a list holding a String for each year on record.
+	 * 
+	 * @return a list of all years
+	 */
 	public static List<String> getListOfYears() {
 		return new ArrayList<String>(namesByYear.keySet());
 	}
 	
+	/**
+	 * Retrieves an array holding a String for each year on record.
+	 * 
+	 * @return an array of all years
+	 */
 	public static String[] getArrayOfYears() {
 		List<String> stringList = getListOfYears();
 		int numEntries = stringList.size();
 		return stringList.toArray(new String[numEntries]);
 	}
 
+	/**
+	 * Retrieves a list of NameData entries for the given year.
+	 * 
+	 * @param year of interest
+	 * @return a list of NameData entries
+	 */
 	public static List<NameData> getListForYear(String year) {
 		return namesByYear.get(year);
 	}
 
+	/**
+	 * Retrieves an array of NameData entries for the given year.
+	 * 
+	 * @param year of interest
+	 * @return an array of NameData entries
+	 */
 	public static NameData[] getArrayForYear(String year) {
 		List<NameData> data = getListForYear(year);
 		int numEntries = data.size();

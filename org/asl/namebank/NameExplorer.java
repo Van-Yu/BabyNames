@@ -36,8 +36,8 @@ public class NameExplorer {
 	}
 
 	/**
-	 * Task 4. Return an approximate count of the total number of babies, by gender,
-	 * for the specified year.
+	 * Task 4. Return a count of the number of babies born in a given year, by
+	 * gender.
 	 * 
 	 * @param year
 	 * @return the number of babies born with the indicated gender
@@ -47,14 +47,34 @@ public class NameExplorer {
 	}
 
 	/**
-	 * Task 5. Return an approximate count of the total number of babies in a year,
-	 * regardless of gender.
+	 * Task 5. Return a count of the total number of babies born during a given
+	 * year, regardless of gender.
 	 * 
 	 * @param year
 	 * @return the number of babies born
 	 */
-	public int numBabiesBorn(String year) {
+	public int numBabiesTotal(String year) {
 		return 0;
 	}
 
+	/**
+	 * Task 6. Given a name, find the NameData object associated with the name's
+	 * most popular year (in terms of ranking). If a name has the same popularity
+	 * across multiple years, return the data for year with the highest number of
+	 * babies given the name (within a gender).
+	 * 
+	 * @param the
+	 *            name of interest
+	 * @return the NameData object of the year that name was most popular
+	 */
+	public NameData getMostPopularYear(String name) {
+		return null;
+	}
+
+	/**
+	 * Task 7. What name has been assigned to the most babies on record?
+	 */
+	public String mostFrequentlyAssignedName() {
+		return null;
+	}
 }
