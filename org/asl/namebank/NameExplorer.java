@@ -77,7 +77,7 @@ public class NameExplorer {
 	 */
 	public static String mostFrequentlyAssignedName() {
 		return null;
-	}
+	}	
 	
 	public static void main(String[] args) {
 		// Task 1.
@@ -102,10 +102,10 @@ public class NameExplorer {
 		// Task 7
 
 		/** How might you go about answering the following questions: */
-		// Is Michael always the most popular name given in a year?
 		// When was the height of popularity of your own name?
 		// How many different names were given to girls in 1880? in 1980?
 		// How many names account for 50% of the babies named in 1880? in 1980?
+		// What was the most popular initial letter for a given year?
 	}
 
 }
