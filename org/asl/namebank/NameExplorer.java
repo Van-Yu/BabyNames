@@ -9,7 +9,8 @@ public class NameExplorer {
 	 * @return the name with the most occurrences
 	 */
 	public static String mostPopularNameForYear(String year) {
-		return null;
+		NameData[] names = NameBank.getArrayForYear(year);
+		return names[0].getGivenName(); // this is inaccurate! fix it
 	}
 
 	/**
