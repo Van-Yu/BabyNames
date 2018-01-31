@@ -119,7 +119,7 @@ public class NameExplorer {
 		 * dramatic or explosive way? You might determine the percent change for each
 		 * name that was NOT in the top 10 the previous year and from those, identify
 		 * the name that entered the top 10 with the highest percentage change. Can you
-		 * link this suddenly popular name to a movie, TV show, or historic occurrence?
+		 * link this suddenly popular name to a movie, TV show, or historic event?
 		 */
 	}
 
