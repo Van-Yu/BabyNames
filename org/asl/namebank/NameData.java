@@ -5,14 +5,14 @@ public class NameData {
 	private String year;
 	private String givenName;
 	private String gender;
-	private int number;
+	private int numBabies;
 
 	public NameData(String year, String name, String gender,
 			int number) {
 		this.year = year;
 		this.givenName = name;
 		this.gender = gender;
-		this.number = number;
+		this.numBabies = number;
 	}
 
 	public String getYear() {
@@ -27,11 +27,11 @@ public class NameData {
 		return gender;
 	}
 
-	public int getNumber() {
-		return number;
+	public int getNumBabies() {
+		return numBabies;
 	}
 	@Override
 	public String toString() {
-		return year+","+givenName+","+gender+","+number;
+		return year+","+givenName+","+gender+","+numBabies;
 	}
 }
