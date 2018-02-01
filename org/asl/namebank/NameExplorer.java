@@ -90,7 +90,7 @@ public class NameExplorer {
 		// Task 2.
 		String mpg2001 = mostPopularNameForYearByGender("2001", "M");
 		System.out.println(
-				"The most popular male name for 2001: " + mpg2001); // Michael
+				"The most popular male name for 2001: " + mpg2001); // Jacob
 		// Task 3.
 
 		// Task 4.
