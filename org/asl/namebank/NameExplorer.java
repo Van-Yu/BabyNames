@@ -81,25 +81,41 @@ public class NameExplorer {
 	}
 
 	/**
-	 * Task 8. Often, several names might be considered nicknames for a common name.
-	 * For example, "William", "Will", "Bill", "Billy", "Willie", and "Willy" are
-	 * all derived from the name "William". Write a method that accepts an
+	 * Task 8. Collect the name(s) of babies who share the same number of 
+	 * occurrences.  Return an array holding their names.
+	 * 
+	 * @param numberOfOccurrences
+	 *            the shared popularity
+	 * @return
+	 */
+	public static String[] getTiedNames(int numberOfOccurrences) {
+		return null;
+	}
+
+	/**
+	 * Task 9a. Often, several names might be considered nicknames for a common
+	 * name. For example, "William", "Will", "Bill", "Billy", "Willie", and "Willy"
+	 * are all derived from the name "William". Write a method that accepts an
 	 * array/list of names and produces an array/list where the derived names have
 	 * been removed but their individual counts have been added to the count of the
 	 * first (base) name.
 	 * 
-	 * @param original an array of NameData elements
-	 * @param year the year of interest
+	 * @param original
+	 *            an array of NameData elements
+	 * @param year
+	 *            the year of interest
 	 */
 	public static NameData[] mergeDerivedNames(NameData[] original, String year) {
 		return null;
 	}
 
 	/**
-	 * Task 9. Task 8, but using lists.
+	 * Task 9b. Same as task 9a, but using lists.
 	 * 
-	 * @param original a list of NameData elements
-	 * @param year the year of interest
+	 * @param original
+	 *            a list of NameData elements
+	 * @param year
+	 *            the year of interest
 	 */
 	public static List<NameData> mergeDerivedNames(List<NameData> original) {
 		return null;
@@ -110,7 +126,8 @@ public class NameExplorer {
 	 * given year? As the basis for comparison, determine which names are present
 	 * for both males and females then use the minimum of the two counts.
 	 * 
-	 * @param year the year of interest
+	 * @param year
+	 *            the year of interest
 	 */
 	public static String mostPopularGenderNeutral(String year) {
 		return null;
@@ -123,8 +140,8 @@ public class NameExplorer {
 		String mp1987 = mostPopularNameForYear("1987"); // Michael
 		System.out.println("The most popular name for 1987: " + mp1987);
 		// Task 2.
-		String mpg2001 = mostPopularNameForYearByGender("2001", "M");
-		System.out.println("The most popular male name for 2001: " + mpg2001); // Jacob
+		String mpg2001 = mostPopularNameForYearByGender("2001", "F");
+		System.out.println("The most popular male name for 2001: " + mpg2001); // Emily
 		// Task 3.
 
 		// Task 4.
