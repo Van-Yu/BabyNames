@@ -27,11 +27,15 @@ public class NameData {
 		return gender;
 	}
 
-	public int getNumBabies() {
+	public int getNumber() {
 		return numBabies;
 	}
 	@Override
 	public String toString() {
-		return year+","+givenName+","+gender+","+numBabies;
+		StringBuilder sb = new StringBuilder("{");
+		sb.append(getGivenName()+" (");
+		sb.append(getYear()+", "+getGender()+"): ");
+		sb.append(getNumber()+"}");
+		return sb.toString();
 	}
 }

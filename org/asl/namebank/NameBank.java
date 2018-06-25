@@ -20,11 +20,14 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class NameBank {
 
-	private static HashMap<String, List<NameData>> namesByYear;
+	private static HashMap<String, List<NameData>> dataByYear;
+	private static HashSet<NameData> names;
 
 	static {
 		initializeNameData();
@@ -36,7 +39,7 @@ public class NameBank {
 	 * @return a list of all years
 	 */
 	public static List<String> getListOfYears() {
-		return new ArrayList<String>(namesByYear.keySet());
+		return new ArrayList<String>(dataByYear.keySet());
 	}
 	
 	/**
@@ -57,7 +60,7 @@ public class NameBank {
 	 * @return a list of NameData entries
 	 */
 	public static List<NameData> getListForYear(String year) {
-		return namesByYear.get(year);
+		return dataByYear.get(year);
 	}
 
 	/**
@@ -71,9 +74,14 @@ public class NameBank {
 		int numEntries = data.size();
 		return data.toArray(new NameData[numEntries]);
 	}
+	
+	public static Set<NameData> getAllNameData() {
+		return names;
+	}
 
 	private static void initializeNameData() {
-		namesByYear = new HashMap<String, List<NameData>>();
+		dataByYear = new HashMap<String, List<NameData>>();
+		names = new HashSet<NameData>();
 		File directory = new File(
 				NameBank.class.getResource("/names/").getFile());
 		File[] files = directory.listFiles(new FilenameFilter() {
@@ -87,16 +95,18 @@ public class NameBank {
 						f.getName().indexOf('.'));
 				List<String> lines = Files
 						.readAllLines(Paths.get(f.getPath()));
-				List<NameData> yearlyTallies = new ArrayList<NameData>();
+				List<NameData> listByYear = new ArrayList<NameData>();
 				for (String line : lines) {
 					String[] data = line.split(",");
 					String name = data[0];
 					String gender = data[1];
 					int number = Integer.parseInt(data[2]);
-					yearlyTallies.add(new NameData(year, name,
-							gender, number));
+					NameData nd = new NameData(year, name,
+							gender, number);
+					listByYear.add(nd);
+					names.add(nd);
 				}
-				namesByYear.put(year, yearlyTallies);
+				dataByYear.put(year, listByYear);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
