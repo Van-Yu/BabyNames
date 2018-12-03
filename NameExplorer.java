@@ -1,5 +1,3 @@
-package org.asl.namebank;
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -122,13 +120,13 @@ public class NameExplorer {
 		// What was the most popular initial letter for a given year?
 
 		/**
-		 * Extreme challenge 1. Identify the names in a year that had repeated letters,
+		 * Optional challenge 1. Identify the names in a year that had repeated letters,
 		 * such as the "n" in "Donna", the "s" in "Massimo", or the "a" in "Pumbaa".
 		 * Prepare a list/array of these names in alphabetical order.
 		 */
 
 		/**
-		 * Extreme challenge 2. Which names entered the top 10 for their gender in a
+		 * Optional challenge 2. Which names entered the top 10 for their gender in a
 		 * dramatic or explosive way? You might determine the percent change for each
 		 * name that was NOT in the top 10 the previous year and from those, identify
 		 * the name that entered the top 10 with the highest percentage change. Can you

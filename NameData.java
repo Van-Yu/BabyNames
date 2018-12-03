@@ -1,5 +1,3 @@
-package org.asl.namebank;
-
 public class NameData {
 
 	private String year;

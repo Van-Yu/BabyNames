@@ -11,8 +11,6 @@
  * K Collins, Spring 2018
 
  */
-package org.asl.namebank;
-
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
