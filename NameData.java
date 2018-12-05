@@ -25,7 +25,7 @@ public class NameData {
 		return gender;
 	}
 
-	public int getNumber() {
+	public int getNumBabies() {
 		return numBabies;
 	}
 	@Override
@@ -33,7 +33,7 @@ public class NameData {
 		StringBuilder sb = new StringBuilder("{");
 		sb.append(getGivenName()+" (");
 		sb.append(getYear()+", "+getGender()+"): ");
-		sb.append(getNumber()+"}");
+		sb.append(getNumBabies()+"}");
 		return sb.toString();
 	}
 }
