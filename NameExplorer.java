@@ -29,7 +29,7 @@ public class NameExplorer {
 	 * popularity, regardless of gender.
 	 * 
 	 * @param year
-	 * @return an array holding, in order, the ten most popular names for that year
+	 * @return a list holding, in order, the ten most popular names for that year
 	 */
 	public static List<String> topTenForYear(String year) {
 		return null;
