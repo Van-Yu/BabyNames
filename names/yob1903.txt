@@ -2122,7 +2122,7 @@ Leo,M,636
 Alfred,M,557
 Elmer,M,556
 Sam,M,552
-Andrew,M,551
+Andrew,M,550
 Lawrence,M,536
 Eugene,M,478
 Lee,M,477
@@ -2212,7 +2212,7 @@ Nathan,M,146
 Lonnie,M,145
 Bennie,M,144
 Gordon,M,142
-Jose,M,142
+Jose,M,141
 Dewey,M,140
 Earnest,M,140
 Alex,M,138

@@ -1903,8 +1903,8 @@ Roger,M,55
 Ivan,M,54
 Wade,M,54
 Abe,M,53
+Ervin,M,53
 Ora,M,53
-Ervin,M,52
 Forrest,M,52
 Julian,M,52
 Earle,M,51

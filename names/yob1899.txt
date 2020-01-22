@@ -1871,7 +1871,7 @@ Richard,M,744
 Ralph,M,742
 Samuel,M,704
 Charlie,M,678
-David,M,647
+David,M,646
 Herbert,M,590
 Howard,M,589
 Jack,M,582

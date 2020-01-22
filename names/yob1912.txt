@@ -1,7 +1,7 @@
 Mary,F,32304
 Helen,F,16133
 Dorothy,F,12645
-Margaret,F,12535
+Margaret,F,12536
 Ruth,F,11280
 Mildred,F,8764
 Anna,F,8586
@@ -98,7 +98,7 @@ Theresa,F,1268
 Cora,F,1253
 Wilma,F,1241
 Inez,F,1228
-Georgia,F,1195
+Georgia,F,1196
 Barbara,F,1184
 Juanita,F,1182
 Hilda,F,1158
@@ -129,7 +129,7 @@ Flora,F,899
 Lucile,F,882
 Nora,F,882
 Olive,F,874
-Naomi,F,834
+Naomi,F,835
 Maria,F,828
 Maxine,F,823
 Henrietta,F,822
@@ -1045,6 +1045,7 @@ Henriette,F,25
 Malissa,F,25
 Manda,F,25
 Mariah,F,25
+Mayola,F,25
 Odelia,F,25
 Retta,F,25
 Rilla,F,25
@@ -1067,7 +1068,6 @@ Madlyn,F,24
 Margarett,F,24
 Marquerite,F,24
 Maurice,F,24
-Mayola,F,24
 Melinda,F,24
 Mignon,F,24
 Onie,F,24
@@ -2002,6 +2002,7 @@ Cannie,F,9
 Celie,F,9
 Cinda,F,9
 Claris,F,9
+Claude,F,9
 Clorinda,F,9
 Clotilda,F,9
 Collette,F,9
@@ -2192,7 +2193,6 @@ Catheryn,F,8
 Cherrie,F,8
 Clarabel,F,8
 Clarinda,F,8
-Claude,F,8
 Clyda,F,8
 Clydie,F,8
 Concha,F,8
@@ -3446,15 +3446,15 @@ Zylphia,F,5
 John,M,24587
 William,M,19626
 James,M,17644
-Robert,M,12837
+Robert,M,12836
 Joseph,M,12062
 George,M,11734
 Charles,M,11070
 Edward,M,7936
 Frank,M,7912
-Thomas,M,6086
+Thomas,M,6087
 Walter,M,5808
-Henry,M,5644
+Henry,M,5643
 Harold,M,5102
 Paul,M,4785
 Arthur,M,4685
@@ -3929,12 +3929,12 @@ Justin,M,67
 Burl,M,66
 Clem,M,66
 Cletus,M,66
-Gregory,M,66
 Oren,M,66
 Otho,M,66
 Shirley,M,66
 Walker,M,66
 Columbus,M,65
+Gregory,M,65
 Lacy,M,65
 Ora,M,65
 Sammie,M,65
@@ -4052,7 +4052,6 @@ Roderick,M,46
 Santo,M,46
 Abner,M,45
 Alfredo,M,45
-Beverly,M,45
 Carlyle,M,45
 Carson,M,45
 Carter,M,45
@@ -4067,6 +4066,7 @@ Nickolas,M,45
 Smith,M,45
 Antone,M,44
 Bennett,M,44
+Beverly,M,44
 Chas,M,44
 Chauncey,M,44
 Eldred,M,44

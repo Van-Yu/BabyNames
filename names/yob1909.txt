@@ -263,7 +263,7 @@ Lenora,F,189
 Cecile,F,186
 Bertie,F,184
 Kate,F,183
-Annette,F,182
+Annette,F,181
 Madge,F,180
 Augusta,F,179
 Hester,F,179
@@ -2552,7 +2552,7 @@ James,M,7594
 George,M,4688
 Robert,M,4563
 Joseph,M,4348
-Charles,M,4030
+Charles,M,4029
 Frank,M,3244
 Edward,M,2935
 Thomas,M,2468

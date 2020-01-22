@@ -1862,7 +1862,7 @@ Peter,M,412
 Frederick,M,406
 Claude,M,389
 Ray,M,380
-Chester,M,378
+Chester,M,377
 Lewis,M,377
 Clyde,M,370
 Edwin,M,346

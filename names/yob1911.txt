@@ -2875,7 +2875,7 @@ Joseph,M,6488
 Charles,M,5725
 Frank,M,4314
 Edward,M,4164
-Thomas,M,3293
+Thomas,M,3292
 Henry,M,3167
 Walter,M,3074
 Harry,M,2538
@@ -2888,7 +2888,7 @@ Raymond,M,2088
 Richard,M,2030
 Louis,M,1838
 Fred,M,1808
-Clarence,M,1774
+Clarence,M,1775
 Ralph,M,1674
 Jack,M,1668
 Carl,M,1574

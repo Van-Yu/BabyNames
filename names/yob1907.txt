@@ -7,7 +7,7 @@ Dorothy,F,4967
 Elizabeth,F,4624
 Mildred,F,4277
 Alice,F,4107
-Marie,F,3879
+Marie,F,3880
 Florence,F,3750
 Ethel,F,3698
 Lillian,F,3542
@@ -2398,7 +2398,7 @@ Zoa,F,5
 Zonnie,F,5
 Zuma,F,5
 John,M,8983
-William,M,6905
+William,M,6904
 James,M,6707
 George,M,4445
 Robert,M,4020
@@ -2435,7 +2435,7 @@ Charlie,M,793
 Alfred,M,738
 Francis,M,717
 Theodore,M,712
-Herbert,M,710
+Herbert,M,711
 Andrew,M,708
 Eugene,M,691
 Leo,M,651
@@ -2445,7 +2445,7 @@ Elmer,M,616
 Anthony,M,593
 Kenneth,M,589
 Michael,M,586
-Herman,M,562
+Herman,M,561
 Leroy,M,550
 Leonard,M,547
 Daniel,M,528
