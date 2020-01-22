@@ -22,7 +22,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class NameBank {
+public class NameService {
 
 	private static HashMap<String, List<NameData>> dataByYear;
 	private static HashSet<NameData> names;
@@ -32,23 +32,22 @@ public class NameBank {
 	}
 	
 	/**
-	 * Retrieves a list holding a String for each year on record.
+	 * Collect a list of all years for which data is available.
 	 * 
-	 * @return a list of all years
+	 * @return a list of years as strings
 	 */
 	public static List<String> getListOfYears() {
 		return new ArrayList<String>(dataByYear.keySet());
 	}
 	
 	/**
-	 * Retrieves an array holding a String for each year on record.
+	 * Collect an array of all years for which data is available.
 	 * 
-	 * @return an array of all years
+	 * @return an array of years as strings
 	 */
 	public static String[] getArrayOfYears() {
-		List<String> stringList = getListOfYears();
-		int numEntries = stringList.size();
-		return stringList.toArray(new String[numEntries]);
+		List<String> yearList = getListOfYears();
+		return yearList.toArray(new String[yearList.size()]);
 	}
 
 	/**
@@ -69,8 +68,7 @@ public class NameBank {
 	 */
 	public static NameData[] getArrayForYear(String year) {
 		List<NameData> data = getListForYear(year);
-		int numEntries = data.size();
-		return data.toArray(new NameData[numEntries]);
+		return data.toArray(new NameData[data.size()]);
 	}
 	
 	public static Set<NameData> getAllNameData() {
@@ -81,7 +79,7 @@ public class NameBank {
 		dataByYear = new HashMap<String, List<NameData>>();
 		names = new HashSet<NameData>();
 		File directory = new File(
-				NameBank.class.getResource("/names/").getFile());
+				NameService.class.getResource("/names/").getFile());
 		File[] files = directory.listFiles(new FilenameFilter() {
 			public boolean accept(File dir, String name) {
 				return name.endsWith("txt");

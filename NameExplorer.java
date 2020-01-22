@@ -14,7 +14,7 @@ public class NameExplorer {
    }
 
 	/**
-	 * Task 2. Find the most popular name for a year, filtered by gender.
+	 * Task 2. Find the most popular name for a year for the specified gender.
 	 * 
 	 * @param year
 	 * @param gender
@@ -26,15 +26,15 @@ public class NameExplorer {
 
 	/**
 	 * Task 3. Return a list holding the top ten names for the year, in decreasing
-	 * popularity, regardless of gender.
+	 * popularity, no matter the gender.
 	 * 
 	 * @param year
-	 * @return a list holding, in order, the ten most popular names for that year
+	 * @return the ten most popular names 
 	 */
    public static List<String> topTenForYear(String year) {
       List<NameData> ordered = new ArrayList<NameData>();
       List<String> results = new ArrayList<String>();
-      List<NameData> data = NameBank.getListForYear(year);
+      List<NameData> data = NameService.getListForYear(year);
      
      // traverse data and insert into ordered at correct index
       for (int i = 0; i< data.size(); i++) {
@@ -100,7 +100,7 @@ public class NameExplorer {
 	 *            the year of interest
 	 */
    public static int countNickNames(List<String> nickNames, String year) {
-      List<NameData> data = NameBank.getListForYear(year);
+      List<NameData> data = NameService.getListForYear(year);
       List<NameData> results = new ArrayList<NameData>();
       int total = 0;
       for (int i = 0; i< data.size(); i++) {
