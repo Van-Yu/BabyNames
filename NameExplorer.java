@@ -54,7 +54,7 @@ public class NameExplorer {
 	 * @param year
 	 * @return the ten most popular names
 	 */
-	public static List<String> topTenForYear(String year) {
+	public static ArrayList<String> topTenForYear(String year) {
 		return null; // TODO implement
 	}
 
@@ -121,19 +121,7 @@ public class NameExplorer {
 	 */
 	
 	public static void main(String[] args) {
-		// Task 1.
-		String mp1964 = mostPopularNameForYear("1964"); // Michael
-		String mp1987 = mostPopularNameForYear("1987"); // Michael
-		// Task 2.
-		String mpg2001 = mostPopularNameForYearByGender("2001", "F");// Emily
-		// Task 3.
-		System.out.println(topTenForYear("1986"));
-		// Task 4.
-		List<String> nickNames = new ArrayList<String>();
-		nickNames.add("William");
-		nickNames.add("Willy");
-		nickNames.add("Bill");
-		System.out.println(countAsSingleName(nickNames, "1986"));
-		// additional testers, etc.
+		String mostPopularName1986 = mostPopularNameForYear("1986"); // Michael
+		System.out.println("The most popular name in 1986 was: "+mostPopularName1986);
 	}
 }

@@ -24,7 +24,7 @@ import java.util.Set;
 
 public class NameService {
 
-	private static HashMap<String, List<NameData>> dataByYear;
+	private static HashMap<String, ArrayList<NameData>> dataByYear;
 	private static HashSet<NameData> names;
 
 	static {
@@ -36,7 +36,7 @@ public class NameService {
 	 * 
 	 * @return a list of years as strings
 	 */
-	public static List<String> getListOfYears() {
+	public static ArrayList<String> getListOfYears() {
 		return new ArrayList<String>(dataByYear.keySet());
 	}
 	
@@ -46,7 +46,7 @@ public class NameService {
 	 * @return an array of years as strings
 	 */
 	public static String[] getArrayOfYears() {
-		List<String> yearList = getListOfYears();
+		ArrayList<String> yearList = getListOfYears();
 		return yearList.toArray(new String[yearList.size()]);
 	}
 
@@ -56,7 +56,7 @@ public class NameService {
 	 * @param year of interest
 	 * @return a list of NameData entries
 	 */
-	public static List<NameData> getListForYear(String year) {
+	public static ArrayList<NameData> getListForYear(String year) {
 		return dataByYear.get(year);
 	}
 
@@ -76,7 +76,7 @@ public class NameService {
 	}
 
 	private static void initializeNameData() {
-		dataByYear = new HashMap<String, List<NameData>>();
+		dataByYear = new HashMap<String, ArrayList<NameData>>();
 		names = new HashSet<NameData>();
 		File directory = new File(
 				NameService.class.getResource("/names/").getFile());
@@ -91,7 +91,7 @@ public class NameService {
 						f.getName().indexOf('.'));
 				List<String> lines = Files
 						.readAllLines(Paths.get(f.getPath()));
-				List<NameData> listByYear = new ArrayList<NameData>();
+				ArrayList<NameData> listByYear = new ArrayList<NameData>();
 				for (String line : lines) {
 					String[] data = line.split(",");
 					String name = data[0];
