@@ -10,7 +10,17 @@ public class NameExplorer {
 	 * @return the name with the most occurrences
 	 */
 	public static String mostPopularNameForYear(String year) {
-		return null; // TODO implement
+		ArrayList<NameData> nameForYear = NameService.getListForYear(year);
+		String s = null;
+		int largest = 0;
+		for(NameData n: nameForYear){
+			if (n.getNumBabies() > largest){
+				s = n.getGivenName();
+				largest = n.getNumBabies();
+			}
+		}
+
+		return s;
 	}
 
 	/**
@@ -22,7 +32,27 @@ public class NameExplorer {
 	 * @return the name with the most occurrences
 	 */
 	public static String mostPopularNameForYearByGender(String year, String gender) {
-		return null; // TODO implement
+		ArrayList<NameData> nameForYear = NameService.getListForYear(year);
+    	ArrayList<NameData> nameForGender = new ArrayList<NameData>();
+		for(NameData n: nameForYear){
+			if (n.getGender().equals("F") && gender.equals("F")){
+				nameForGender.add(n);
+			}
+			if (n.getGender().equals("M") && gender.equals("M")){
+				nameForGender.add(n);
+			}
+		}
+
+		String s = null;
+		int largest = 0;
+		for(NameData n: nameForGender){
+			if (n.getNumBabies() > largest){
+				s = n.getGivenName();
+				largest = n.getNumBabies();
+			}
+		}
+
+		return s;
 	}
 
 	/**
@@ -33,7 +63,23 @@ public class NameExplorer {
 	 * @return the number of babies born with the indicated gender
 	 */
 	public static int numBabiesByGender(String year, String gender) {
-		return 0; // TODO implement
+		ArrayList<NameData> nameForYear = NameService.getListForYear(year);
+    	ArrayList<NameData> nameForGender = new ArrayList<NameData>();
+		for(NameData n: nameForYear){
+			if (n.getGender().equals("F") && gender.equals("F")){
+				nameForGender.add(n);
+			}
+			if (n.getGender().equals("M") && gender.equals("M")){
+				nameForGender.add(n);
+			}
+		}
+
+		int total = 0;
+		for(NameData n: nameForGender){
+			total += n.getNumBabies();
+		}
+
+		return total; 
 	}
 
 	/**
@@ -44,7 +90,13 @@ public class NameExplorer {
 	 * @return the number of babies born
 	 */
 	public static int numBabiesTotal(String year) {
-		return 0; // TODO implement
+		ArrayList<NameData> namesForYear = NameService.getListForYear(year);
+		int total = 0;
+		for(NameData n: namesForYear){
+			total += n.getNumBabies();
+		}
+
+		return total;
 	}
 
 	/**
@@ -55,6 +107,7 @@ public class NameExplorer {
 	 * @return the ten most popular names
 	 */
 	public static ArrayList<String> topTenForYear(String year) {
+
 		return null; // TODO implement
 	}
 
@@ -85,7 +138,16 @@ public class NameExplorer {
 	 *            the year of interest
 	 */
 	public static int countAsSingleName(List<String> nickNames, String year) {
-		return 0; // TODO implement
+		int total = 0;
+		ArrayList<NameData> namesForYear = NameService.getListForYear(year);
+		
+		for(String name: nickNames){
+			for(NameData baby: namesForYear){
+				if (baby.getGivenName().equals(name)) total += baby.getNumBabies();
+			}
+		}
+
+		return total; // TODO implement
 	}
 
 	/**
@@ -121,7 +183,7 @@ public class NameExplorer {
 	 */
 	
 	public static void main(String[] args) {
-		String mostPopularName1986 = mostPopularNameForYear("1986"); // Michael
-		System.out.println("The most popular name in 1986 was: "+mostPopularName1986);
+		int mostPopularName1986 = numBabiesTotal("1986"); // Michael
+		System.out.println("The number of boys born in 1986 was: "+mostPopularName1986);
 	}
 }
