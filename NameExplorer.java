@@ -122,7 +122,22 @@ public class NameExplorer {
 	 * @return the NameData object of the year that name was most popular
 	 */
 	public static NameData getMostPopularYear(String name) {
-		return null; // TODO implement
+		int mostBabies = 0;
+		NameData babyWithMost = null;
+
+		ArrayList<NameData> names;
+
+		for (int year = 1880; year<2019; year++){
+			names = NameService.getListForYear(""+year);
+			for (NameData n: names){
+				if (n.getGivenName().equals(name) && n.getNumBabies()>mostBabies){
+					mostBabies = n.getNumBabies();
+					babyWithMost = n;
+				}
+			}
+		}
+
+		return babyWithMost;
 	}
 
 	/**
